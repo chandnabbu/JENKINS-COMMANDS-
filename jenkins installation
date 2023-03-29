@@ -1,0 +1,28 @@
+###commands to install the jenkins in ubuntu ####
+##Update your system:##
+sudo apt-get update
+##Install Java:##
+sudo apt-get install default-jdk
+##Add the Jenkins repository key to your system##
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+##Add the Jenkins repository to your system##
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+##Update your system again:##
+sudo apt-get update
+##Install Jenkins:##
+sudo apt-get install jenkins
+##Start the Jenkins service:##
+sudo systemctl start jenkins
+##Check the status of the Jenkins service:##
+sudo systemctl status jenkins
+##Once the Jenkins service is running, you can access the Jenkins web interface by navigating to http://localhost:8080 in your web browser.##
+
+COMMANDS TO INSTALL THE JENKINS
+sudo apt-get update
+sudo apt-get install default-jdk
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
